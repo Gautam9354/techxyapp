@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Telegram Club</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Smooth gradient background like the image */
+        body {
+            background: radial-gradient(circle at top left, #0b2c24, #0d1520 60%);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen text-white font-sans p-4">
+
+    <div class="bg-[#16222f]/60 backdrop-blur-md border border-gray-700/30 rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl tracking-wide">
+        
+        <div class="relative w-32 h-32 mx-auto mb-6 rounded-full p-1 bg-gradient-to-tr from-green-400 to-emerald-600 shadow-[0_0_20px_rgba(52,211,153,0.4)]">
+            <img src="profile.png" alt="Profile" class="w-full h-full object-cover rounded-full border-2 border-[#16222f]">
+        </div>
+
+        <h1 class="text-2xl font-bold uppercase tracking-wider mb-4 flex justify-center items-center gap-2">
+            TECH BHAI OK <span class="text-xl">🥷</span>
+        </h1>
+
+        <div class="inline-block border border-green-500/50 bg-green-950/30 text-green-400 font-semibold text-xs px-4 py-2 rounded-full uppercase tracking-widest mb-6">
+            🔥 Premium Telegram Club 🔥
+        </div>
+
+        <div class="space-y-3 text-gray-300 text-sm mb-8 text-left max-w-[240px] mx-auto">
+            <div class="flex items-center gap-3">
+                <span>💸</span> <span>Daily Winning Updates</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span>🚀</span> <span>Instant Telegram Access</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span>🏆</span> <span>Trusted Premium Community</span>
+            </div>
+        </div>
+
+        <p class="text-gray-400 text-base mb-6">
+            Redirecting in <span id="countdown" class="text-green-400 font-bold text-2xl mx-1">2</span> sec...
+        </p>
+
+        <a id="tg-link" href="https://t.me/your_telegram_channel" class="block w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-900 font-bold text-lg py-4 rounded-2xl shadow-[0_4px_20px_rgba(6,182,212,0.4)] transition-all duration-300 transform hover:scale-[1.02] uppercase tracking-wider">
+            🚀 Join Telegram Now
+        </a>
+
+        <p class="text-xs text-gray-500 mt-4">
+            If redirect doesn't work, click the button above.
+        </p>
+    </div>
+
+    <script>
+        // Apne Telegram Channel ka URL yahan set karein
+        const telegramURL = "https://MONKMOD.IN"; 
+        
+        let timeLeft = 2; // 2 seconds ka timer
+        const countdownElement = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = telegramURL; // Automatic redirect
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
